@@ -8,6 +8,7 @@ import org.intellij.images.fileTypes.impl.ImageFileType
 class QoiFileTypeOverrider : FileTypeOverrider {
     override fun getOverriddenFileType(file: VirtualFile): FileType? {
         if (file.extension?.lowercase() == "qoi") {
+            QoiPreloader.registerSpi()
             return ImageFileType.INSTANCE
         }
         return null
