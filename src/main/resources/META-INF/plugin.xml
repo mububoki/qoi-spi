@@ -2,7 +2,26 @@
     <id>com.github.mububoki.qoi-spi</id>
     <name>QOI Image Support</name>
     <vendor>mububoki</vendor>
-    <description>QOI (Quite OK Image) format support for IntelliJ-based IDEs via ImageIO SPI.</description>
+    <description><![CDATA[
+<p>Adds <a href="https://qoiformat.org/">QOI (Quite OK Image)</a> format support to IntelliJ-based IDEs.</p>
+
+<p>Once installed, <code>.qoi</code> files are displayed in the built-in image viewer with full support for zooming, grid overlay, and other standard viewer features — no external tools required.</p>
+
+<h3>Features</h3>
+<ul>
+  <li>View QOI images directly in the editor</li>
+  <li>Works with all IntelliJ-based IDEs (IntelliJ IDEA, GoLand, WebStorm, etc.)</li>
+  <li>Pure JVM implementation — no native dependencies</li>
+</ul>
+]]></description>
+
+    <change-notes><![CDATA[
+<h3>1.0.0</h3>
+<ul>
+  <li>Initial release</li>
+  <li>QOI image decoding and viewer integration</li>
+</ul>
+]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.platform.images</depends>
