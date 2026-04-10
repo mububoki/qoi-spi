@@ -5,14 +5,12 @@
     <description>QOI (Quite OK Image) format support for IntelliJ-based IDEs via ImageIO SPI.</description>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.platform.images</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileEditorProvider
-            implementation="com.github.mububoki.qoispi.QoiEditorProvider"/>
-        <fileType
-            name="QOI"
-            implementationClass="com.github.mububoki.qoispi.QoiFileType"
-            fieldName="INSTANCE"
-            extensions="qoi"/>
+        <preloadingActivity
+            implementation="com.github.mububoki.qoispi.QoiPreloader"/>
+        <fileTypeOverrider
+            implementation="com.github.mububoki.qoispi.QoiFileTypeOverrider"/>
     </extensions>
 </idea-plugin>

@@ -14,6 +14,7 @@ repositories {
 intellij {
     version.set("2024.1.7")
     type.set("IC")
+    plugins.set(listOf("com.intellij.platform.images"))
 }
 
 tasks {
