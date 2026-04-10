@@ -7,6 +7,8 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <fileEditorProvider
+            implementation="com.github.mububoki.qoispi.QoiEditorProvider"/>
         <fileType
             name="QOI"
             implementationClass="com.github.mububoki.qoispi.QoiFileType"
