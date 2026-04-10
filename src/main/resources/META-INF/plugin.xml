@@ -1,0 +1,16 @@
+<idea-plugin>
+    <id>com.github.mububoki.qoi-spi</id>
+    <name>QOI Image Support</name>
+    <vendor>mububoki</vendor>
+    <description>QOI (Quite OK Image) format support for IntelliJ-based IDEs via ImageIO SPI.</description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+            name="QOI"
+            implementationClass="com.github.mububoki.qoispi.QoiFileType"
+            fieldName="INSTANCE"
+            extensions="qoi"/>
+    </extensions>
+</idea-plugin>
