@@ -27,8 +27,8 @@
     <depends>com.intellij.platform.images</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <preloadingActivity
-            implementation="com.github.mububoki.qoispi.QoiPreloader"/>
+        <postStartupActivity
+            implementation="com.github.mububoki.qoispi.QoiStartupActivity"/>
         <fileTypeOverrider
             implementation="com.github.mububoki.qoispi.QoiFileTypeOverrider"/>
     </extensions>
