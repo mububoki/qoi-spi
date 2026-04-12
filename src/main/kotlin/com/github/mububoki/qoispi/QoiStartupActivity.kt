@@ -1,12 +1,13 @@
 package com.github.mububoki.qoispi
 
-import com.intellij.openapi.application.PreloadingActivity
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.startup.ProjectActivity
 import javax.imageio.ImageIO
 import javax.imageio.spi.IIORegistry
 import javax.swing.SwingUtilities
 
-class QoiPreloader : PreloadingActivity() {
-    override fun preload() {
+class QoiStartupActivity : ProjectActivity {
+    override suspend fun execute(project: Project) {
         registerSpi()
         SwingUtilities.invokeLater { registerSpi() }
     }

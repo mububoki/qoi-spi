@@ -16,6 +16,10 @@
 ]]></description>
 
     <change-notes><![CDATA[
+<h3>1.0.1</h3>
+<ul>
+  <li>Replace deprecated internal API with ProjectActivity</li>
+</ul>
 <h3>1.0.0</h3>
 <ul>
   <li>Initial release</li>
@@ -27,8 +31,8 @@
     <depends>com.intellij.platform.images</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <preloadingActivity
-            implementation="com.github.mububoki.qoispi.QoiPreloader"/>
+        <postStartupActivity
+            implementation="com.github.mububoki.qoispi.QoiStartupActivity"/>
         <fileTypeOverrider
             implementation="com.github.mububoki.qoispi.QoiFileTypeOverrider"/>
     </extensions>
